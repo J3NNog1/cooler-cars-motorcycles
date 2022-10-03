@@ -72,7 +72,24 @@ function edit(req, res) {
     res.redirect('/vehicles')
   })
 }
-
+function update(req, res) {
+  Vehicle.findById(req.params.id)
+  .then(vehicle => {
+    if (vehicle.owner.equals(req.user.profile._id)) {
+      req.body.fast = !!req.body.fast
+      vehicle.updateOne(req.body)
+      .then(()=> {
+        res.redirect(`/vehicles/${vehicle._id}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/vehicles`)
+  })
+}
 
 export {
   index,
@@ -80,4 +97,5 @@ export {
   show,
   changeSpeed,
   edit,
+  update,
 }

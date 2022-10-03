@@ -8,6 +8,7 @@ router.get('/', vehiclesCtrl.index)
 router.get('/:id', vehiclesCtrl.show)
 router.get('/:id/edit', isLoggedIn, vehiclesCtrl.edit)
 
+router.put('/:id', isLoggedIn, vehiclesCtrl.update)
 
 router.post('/',isLoggedIn, vehiclesCtrl.create)
 
