@@ -91,6 +91,24 @@ function update(req, res) {
   })
 }
 
+function deleteVehicle(req, res) {
+  Vehicle.findById(req.params.id)
+  .then(vehicle => {
+    if (vehicle.owner.equals(req.user.profile._id)) {
+      vehicle.delete()
+      .then(() => {
+        res.redirect('/vehicles')
+      })
+    } else {
+      throw new Error ('🚫 Not authorized 🚫')
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/vehicles')
+  })
+}
+
 export {
   index,
   create,
@@ -98,4 +116,6 @@ export {
   changeSpeed,
   edit,
   update,
+  deleteVehicle as delete,
+
 }

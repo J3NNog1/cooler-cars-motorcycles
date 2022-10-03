@@ -14,6 +14,8 @@ router.post('/',isLoggedIn, vehiclesCtrl.create)
 
 router.patch('/:id/change-speed', isLoggedIn, vehiclesCtrl.changeSpeed)
 
+router.delete('/:id', isLoggedIn, vehiclesCtrl.delete)
+
 export {
   router
 }
