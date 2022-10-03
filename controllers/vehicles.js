@@ -45,12 +45,12 @@ function show(req, res) {
 }
 
 function changeSpeed(req, res) {
-  vehicle.findById(req.params.id)
+  Vehicle.findById(req.params.id)
   .then(vehicle => {
     vehicle.fast = !vehicle.fast
     vehicle.save()
     .then(()=> {
-      res.redirect(`/vehicles/${vehicle._id}`)
+      res.redirect(`/vehicles/${req.params.id}`)
     })
   })
   .catch(err => {

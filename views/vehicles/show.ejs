@@ -17,9 +17,14 @@
       method="POST"
     >
       <button class="btn" type="submit">
-        Speed is <%= vehicle.fast ? 'very slow 🐢' : 'too fast 🐇💨' %>
+        Mark speed as <%= vehicle.fast ? 'very slow 🐢' : 'too fast 🐇💨' %>
       </button>
     </form>
+  <% } %>
+  <% if (vehicle.owner.equals(user?.profile._id)) { %>
+    <a href="/vehicles/<%= vehicle._id %>/edit">
+      <button class="btn">Edit this Vehicle  🚧 🏎️ 🏍️ 🚧</button>
+    </a>
   <% } %>
 </section>
 
