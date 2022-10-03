@@ -2,9 +2,8 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Cars and Motorcycles!!!</h1>
   <% if (user) { %>
-    <h2>All Cars and Motorcycles!</h2>
+    <h1>Cars and Motorcycles!!!</h1>
     <form action="/vehicles" method="POST">
       <label>
         Year: 
@@ -26,6 +25,12 @@
       <button type="submit">Add Vehicle</button>
     </form>
   <% } %>
+  <h2>All recent vehicle searches!</h2>
+	<ul>
+  <% vehicles.forEach(vehicle => { %>
+    <li>🌮 <%= vehicle.name %> is <%= vehicle.tasty ? 'fast' : 'not fast' %></li>
+  <% }) %>
+  </ul>
 </section>
 
 <%- include('../partials/footer') %>
