@@ -25,7 +25,11 @@
     <a href="/vehicles/<%= vehicle._id %>/edit">
       <button class="btn">Edit this Vehicle  🚧 🏎️ 🏍️ 🚧</button>
     </a>
+    <form action="/vehicles/<%= vehicle._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this Vehicle 🚘🛵💀</button>
+    </form>
   <% } %>
+
 </section>
 
 <%- include('../partials/footer') %>
