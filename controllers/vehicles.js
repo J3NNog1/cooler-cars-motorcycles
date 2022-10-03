@@ -58,9 +58,26 @@ function changeSpeed(req, res) {
     res.redirect('/vehicles')
   })
 }
+
+function edit(req, res) {
+  Vehicle.findById(req.params.id)
+  .then(vehicle => {
+    res.render('vehicles/edit', {
+      vehicle,
+      title: "Edit 🏎️ 🏍️"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/vehicles')
+  })
+}
+
+
 export {
   index,
   create,
   show,
   changeSpeed,
+  edit,
 }
