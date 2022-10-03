@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Cars and Motorcycles!!!</h1>
+  <h2>All of the Cars and Motorcycles!</h2>
+	<ul>
+  <% vehicles.forEach(vehicle => { %>
+    <li>🌮 <%= vehicle.name %> is <%= vehicle.fast ? 'fast' : 'not fast' %></li>
+  <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>

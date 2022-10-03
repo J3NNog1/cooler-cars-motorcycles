@@ -1,10 +1,9 @@
 import { Router } from 'express'
+import * as tacosCtrl from '../controllers/vehicles.js'
 
 const router = Router()
 
-router.get('/', function (req, res) {
-  res.render('index', {  title: 'Home Page '})
-})
+router.get('/', tacosCtrl.index)
 
 export {
   router
