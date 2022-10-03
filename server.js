@@ -4,9 +4,9 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import createError from 'http-errors'
-import session from 'express-session'
 import logger from 'morgan'
 import methodOverride from 'method-override'
+import session from 'express-session'
 import passport from 'passport'
 
 // import custom middleware
@@ -43,6 +43,18 @@ app.use(
   )
 )
 
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      sameSite: 'lax',
+    }
+  })
+)
+
+
 // session middleware
 app.use(
   session({
@@ -65,6 +77,7 @@ app.use(passDataToView)
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
+// app.use('/profiles', profilesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
