@@ -6,6 +6,7 @@ const router = Router()
 
 router.get('/', vehiclesCtrl.index)
 router.post('/',isLoggedIn, vehiclesCtrl.create)
+router.get('/:id', vehiclesCtrl.show)
 
 export {
   router

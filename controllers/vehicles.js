@@ -29,7 +29,23 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Vehicle.findById(req.params.id)
+  .populate("owner")
+  .then(vehicle => {
+    res.render('vehicles/show', {
+      vehicle,
+      title: "🏎️ 🏍️ show"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/vehicles')
+  })
+}
+
 export {
   index,
   create,
+  show,
 }

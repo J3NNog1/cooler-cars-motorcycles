@@ -33,13 +33,17 @@
 
   <% } %>
   <h2>Recent Vehicle Searches Below! 🏎️ 🏍️</h2>
-	<ul>
+	<ul> 
   <% vehicles.forEach(vehicle => { %>
     <li> 
+      🏎️ 🏍️
+      <a href="/vehicles/<%= vehicle._id %>">
       <%= vehicle.year %> 
       <%= vehicle.make %> 
       <%= vehicle.model %> color
-      <%= vehicle.color %> is
+      <%= vehicle.color %>
+    </a>
+      is
       <%= vehicle.fast ? 'fast' : 'not fast' %></li>
   <% }) %>
   </ul>

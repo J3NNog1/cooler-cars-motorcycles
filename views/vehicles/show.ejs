@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+	<p>From the bias search of <%= vehicle.owner.name %>...</p>
+  <h1>
+    <%= vehicle.year %> 
+    <%= vehicle.make %> 
+    <%= vehicle.model %> color
+    <%= vehicle.color %> 🏎️ 🏍️</h1>
+  <h2>This vehicle is <%= vehicle.fast ? 'fast! 🐇💨' : 'not fast! 🐢' %></h2>
+</section>
+
+<%- include('../partials/footer') %>
