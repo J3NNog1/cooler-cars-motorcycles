@@ -11,6 +11,8 @@ import passport from 'passport'
 
 // import custom middleware
 import { passDataToView } from './middleware/middleware.js'
+import { router as profilesRouter } from './routes/profiles.js'
+
 
 // connect to MongoDB with mongoose
 import './config/database.js'
@@ -80,8 +82,8 @@ app.use(passDataToView)
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/vehicles', vehiclesRouter)
+app.use('/profiles', profilesRouter)
 
-// app.use('/profiles', profilesRouter)
 
 
 
