@@ -1,0 +1,49 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit the Vehicle! 🌮</h1>
+  <form action="/vehicles/<%= vehicle._id %>?_method=PUT" method="POST">
+    <label>
+      Year: 
+      <input 
+        type="text"
+        name="year" 
+        value="<%= vehicle.year %>" 
+        autocomplete="off"
+      >
+      Make: 
+      <input 
+        type="text"
+        name="make" 
+        value="<%= vehicle.make %>" 
+        autocomplete="off"
+      >
+      Model: 
+      <input 
+        type="text"
+        name="model" 
+        value="<%= vehicle.model %>" 
+        autocomplete="off"
+      >
+      Color: 
+      <input 
+        type="text"
+        name="color" 
+        value="<%= vehicle.color %>" 
+        autocomplete="off"
+      >
+    </label>
+    <label>
+      Is it still Fast?
+      <input 
+        type="checkbox" 
+        name="fast" 
+				<%= vehicle.fast ? "checked" : "" %> 
+      >
+    </label>
+    <button type="submit">Edit the 🏎️ 🏍️</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>
