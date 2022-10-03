@@ -2,13 +2,25 @@
 <%- include('../partials/nav') %>
 
 <section>
-	<p>From the bias search of <%= vehicle.owner.name %>...</p>
+  <% if (vehicle.owner) { %>
+	<p>From the bias input of <%= vehicle.owner?.name %>...</p>
+  <% } %>
   <h1>
     <%= vehicle.year %> 
     <%= vehicle.make %> 
     <%= vehicle.model %> color
     <%= vehicle.color %> 🏎️ 🏍️</h1>
   <h2>This vehicle is <%= vehicle.fast ? 'fast! 🐇💨' : 'not fast! 🐢' %></h2>
+  <% if (user) { %>
+    <form 
+      action="/vehicles/<%= vehicle._id %>/change-speed?_method=PATCH" 
+      method="POST"
+    >
+      <button class="btn" type="submit">
+        Speed is <%= vehicle.fast ? 'very slow 🐢' : 'too fast 🐇💨' %>
+      </button>
+    </form>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>

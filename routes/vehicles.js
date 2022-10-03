@@ -5,8 +5,11 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 router.get('/', vehiclesCtrl.index)
-router.post('/',isLoggedIn, vehiclesCtrl.create)
 router.get('/:id', vehiclesCtrl.show)
+
+router.post('/',isLoggedIn, vehiclesCtrl.create)
+
+router.patch('/:id/change-speed', isLoggedIn, vehiclesCtrl.changeSpeed)
 
 export {
   router

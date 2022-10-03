@@ -44,8 +44,23 @@ function show(req, res) {
   })
 }
 
+function changeSpeed(req, res) {
+  vehicle.findById(req.params.id)
+  .then(vehicle => {
+    vehicle.fast = !vehicle.fast
+    vehicle.save()
+    .then(()=> {
+      res.redirect(`/vehicles/${vehicle._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/vehicles')
+  })
+}
 export {
   index,
   create,
   show,
+  changeSpeed,
 }
