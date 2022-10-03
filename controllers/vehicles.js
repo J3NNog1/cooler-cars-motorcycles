@@ -6,7 +6,8 @@ function index(req, res) {
   .then(vehicles => {
     res.render('vehicles/index', {
       vehicles,
-      title: "Vehicle List"
+      title: "Vehicle List",
+    
     })
   })
   .catch(err => {
@@ -15,9 +16,20 @@ function index(req, res) {
   })
 }
 
-
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+	req.body.fast = !!req.body.fast
+  Vehicle.create(req.body)
+  .then(vehicle => {
+    res.redirect('/vehicles')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/vehicles')
+  })
+}
 
 export {
   index,
-
+  create,
 }

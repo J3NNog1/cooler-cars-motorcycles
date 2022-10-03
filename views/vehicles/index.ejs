@@ -2,33 +2,45 @@
 <%- include('../partials/nav') %>
 
 <section>
+  <h1>Cars and Motorcycles!!!</h1>
   <% if (user) { %>
-    <h1>Cars and Motorcycles!!!</h1>
+    <h2>Add a Vehicle!</h2>
     <form action="/vehicles" method="POST">
       <label>
         Year: 
-        <input type="text" name="name" autocomplete="off">
+        <input type="text" name="year" autocomplete="off">
       </label>
         Make: 
-        <input type="text" make="make" autocomplete="off">
+        <input type="text" name="make" autocomplete="off">
       </label>
         Model: 
-        <input type="text" model="model" autocomplete="off">
+        <input type="text" name="model" autocomplete="off">
       </label>
         Color: 
-        <input type="text" color="color" autocomplete="off">
+        <input type="text" name="color" autocomplete="off">
       </label>
+      Type:
+      <select name="type">
+        <option value="car">Car</option>
+        <option value="motorcycle">Motorcylce</option>
+      </select>
       <label>
         Fast:
         <input type="checkbox" name="fast">
       </label>
       <button type="submit">Add Vehicle</button>
     </form>
+
   <% } %>
-  <h2>All recent vehicle searches!</h2>
+  <h2>All recent vehicle search!</h2>
 	<ul>
   <% vehicles.forEach(vehicle => { %>
-    <li>🌮 <%= vehicle.name %> is <%= vehicle.tasty ? 'fast' : 'not fast' %></li>
+    <li> 
+      <%= vehicle.year %> 
+      <%= vehicle.make %> 
+      <%= vehicle.model %> color
+      <%= vehicle.color %> is
+      <%= vehicle.fast ? 'fast' : 'not fast' %></li>
   <% }) %>
   </ul>
 </section>
