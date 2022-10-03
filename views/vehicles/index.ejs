@@ -3,12 +3,20 @@
 
 <section>
   <h1>Cars and Motorcycles!!!</h1>
-  <h2>All of the Cars and Motorcycles!</h2>
-	<ul>
-  <% vehicles.forEach(vehicle => { %>
-    <li>🌮 <%= vehicle.name %> is <%= vehicle.fast ? 'fast' : 'not fast' %></li>
-  <% }) %>
-  </ul>
+  <% if (user) { %>
+    <h2>All Cars and Motorcycles!</h2>
+    <form action="/vehicles" method="POST">
+      <label>
+        Name: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Fast?
+        <input type="checkbox" name="fast">
+      </label>
+      <button type="submit">Add Vehicle</button>
+    </form>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>
