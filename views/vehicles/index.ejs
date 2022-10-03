@@ -2,9 +2,9 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Cars and Motorcycles!!!</h1>
+  <h1>Cars and Motorcycles!!! 🏎️ 🏍️</h1>
   <% if (user) { %>
-    <h2>Add a Vehicle!</h2>
+    <h2>Add a Vehicle! 🏎️ 🏍️</h2>
     <form action="/vehicles" method="POST">
       <label>
         Year: 
@@ -21,18 +21,18 @@
       </label>
       Type:
       <select name="type">
-        <option value="car">Car</option>
-        <option value="motorcycle">Motorcylce</option>
+        <option value="car">Car 🏎️ </option>
+        <option value="motorcycle">Motorcylce 🏍️</option>
       </select>
       <label>
-        Fast:
+        Fast 💯:
         <input type="checkbox" name="fast">
       </label>
       <button type="submit">Add Vehicle</button>
     </form>
 
   <% } %>
-  <h2>All recent vehicle search!</h2>
+  <h2>Recent Vehicle Searches Below! 🏎️ 🏍️</h2>
 	<ul>
   <% vehicles.forEach(vehicle => { %>
     <li> 
