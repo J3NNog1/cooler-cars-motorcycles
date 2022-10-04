@@ -1,16 +1,54 @@
 <%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+<%# include('./partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/landing.css">
 
+
+<% if (!user) { %>
+  <script defer src="https://accounts.google.com/gsi/client"></script>
+<% } %>
+</head>
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
+  <div class="top">
+
+    <h1>Cooler Cars & Motorcycles</h1>
+    <% if (user?.profile.avatar) { %>
+      <div>
+        <img
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
-</main>
+        />
+      </div>
+      <% } %>
+      <div id="home-nav">
+        <a href="/vehicles">Vehicle List 🏎️ 🏍️</a>
+        <a href="/comments">Add a Review 📝</a>
+        <% if (user) { %>
+          <a href="/auth/logout">Login In Here!👋</a>
+          <% } else { %>
+            <div 
+            id="g_id_onload"
+            data-client_id="<%= googleClientID %>"
+            data-login_uri="/auth/google"
+            data-auto_prompt="false"
+            ></div>
+            <div 
+            class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left"
+            ></div>
+            <% } %>
+            
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="img-div"> 
+            <img src="/images/red-motorcycle.jpg" alt="an image of a red motorcycle in a tunnel" />
+          </div>
+        </div>
+        </main>
 
 <%- include('./partials/footer') %>

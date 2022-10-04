@@ -1,0 +1,51 @@
+body {
+  min-height: 100vh;
+
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.top {
+  background-color: #35524A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 40vh;
+
+
+}
+
+.bottom {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #98c9a3;
+  
+}
+
+.img-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.img-div > img{
+  max-height: 85%;
+
+}
