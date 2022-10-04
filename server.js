@@ -11,7 +11,7 @@ import passport from 'passport'
 
 // import custom middleware
 import { passDataToView } from './middleware/middleware.js'
-import { router as profilesRouter } from './routes/profiles.js'
+
 
 
 // connect to MongoDB with mongoose
@@ -24,7 +24,7 @@ import'./config/passport.js'
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as vehiclesRouter } from './routes/vehicles.js'
-
+import { router as profilesRouter } from './routes/profiles.js'
 
 // create the express app
 const app = express()

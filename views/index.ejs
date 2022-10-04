@@ -3,6 +3,14 @@
 <link rel="stylesheet" href="/stylesheets/landing.css">
 
 
+  <!-- <%# if (user?.profile.avatar) { %>
+    <div>
+      <img
+        src="<%# user.profile.avatar %>"
+        alt="<%# user.profile.name %> avatar"
+      />
+    </div>
+  <%# } %> -->
 <% if (!user) { %>
   <script defer src="https://accounts.google.com/gsi/client"></script>
 <% } %>
@@ -15,7 +23,7 @@
       </div>
       <h1>Cooler Cars & Motorcycles</h1>
       <% if (user) { %>
-        <a href="/auth/logout">Login In Here!👋</a>
+        <a href="/auth/logout"><button>Log Out Here!👋</button></a>
         <% } else { %>
           <div 
           id="g_id_onload"
@@ -36,8 +44,9 @@
         </div>
     
       <div id="home-nav">
-        <a href="/vehicles">Vehicle List 🏎️ 🏍️</a>
-        <a href="/comments">Add a Review 📝</a>
+        <a href="/vehicles"><button>Vehicle List 🏎️ 🏍️</button></a>
+        <a href="/profiles"><button>View Profile</button></a>
+        <!-- <a href="/comments"><button>Add Review 📝</button></a> -->
         
             
           </div>
