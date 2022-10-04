@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/profiles/index.css">
 <%- include('../partials/nav') %>
 
-<main>
+<main class="main">
   <div class="card-container">
     <% profiles.forEach(profile => { %>
       <a class="text-decoration-none" href="/profiles/<%= profile._id %>">
@@ -17,6 +17,7 @@
         </div>
       </a>
     <% }) %>
+    
   </div>
 </main>
 
