@@ -47,6 +47,28 @@
     </select>
     <button type="submit">Add Review</button>
   </form>
+  <% if (vehicle.reviews.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Review</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% vehicle.reviews.forEach(function(review) { %>
+          <tr>
+            <td><%= review.createdAt.toLocaleDateString() %></td>
+            <td><%= review.content %></td>
+            <td><%= review.rating %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No Reviews Yet</h3>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>
