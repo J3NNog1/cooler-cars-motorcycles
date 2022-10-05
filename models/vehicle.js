@@ -9,7 +9,9 @@ const vehicleSchema = new Schema({
   color: String,
   fast: Boolean,
 
-  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
+  nowShowing: {type: Boolean, default: true},
+  reviews: [reviewSchema],
 }, {
   timestamps: true
 })
@@ -26,5 +28,8 @@ const Vehicle = mongoose.model('Vehicle', vehicleSchema)
 
 
 export {
-  Vehicle
+  Vehicle,
 }
+
+
+// Review,

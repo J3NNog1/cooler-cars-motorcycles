@@ -11,6 +11,7 @@ router.get('/:id/edit', isLoggedIn, vehiclesCtrl.edit)
 router.put('/:id', isLoggedIn, vehiclesCtrl.update)
 
 router.post('/',isLoggedIn, vehiclesCtrl.create)
+router.post('/:id/reviews', vheiclesCtrl.createReview)
 
 router.patch('/:id/change-speed', isLoggedIn, vehiclesCtrl.changeSpeed)
 
