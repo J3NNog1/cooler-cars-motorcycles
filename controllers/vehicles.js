@@ -109,6 +109,13 @@ function deleteVehicle(req, res) {
   })
 }
 
+
+function createReview(req, res) {
+  
+}
+
+
+
 export {
   index,
   create,
@@ -117,5 +124,5 @@ export {
   edit,
   update,
   deleteVehicle as delete,
-
+  createReview,
 }
