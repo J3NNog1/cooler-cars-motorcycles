@@ -14,7 +14,16 @@ const vehicleSchema = new Schema({
   timestamps: true
 })
 
+const reviewSchema = new Schema({
+  content: String,
+  rating: {type: Number, min: 1, max: 5, default: 5}
+}, {
+  timestamps: true
+})
+
 const Vehicle = mongoose.model('Vehicle', vehicleSchema)
+
+
 
 export {
   Vehicle
