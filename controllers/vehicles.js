@@ -111,7 +111,22 @@ function deleteVehicle(req, res) {
 
 
 function createReview(req, res) {
-  
+  Vehicle.findById(req.params.id)
+  .then(vehicle => {
+    vehicle.reviews.push(req.body)
+    vehicle.save()
+    .then(() => {
+      res.redirect(`/vehicles/${vehicle._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 
