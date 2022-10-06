@@ -1,4 +1,4 @@
-# WAR CARD GAME 
+# COOLER CARS AND MOTORCYCLES 
 
 
 ## Play me ==>
@@ -13,18 +13,17 @@
 
 
 ### How to
-
-> 
-> 
-> 
-> 
+ 
+> Keep in mind to make sure you're logged in so you have access to all UI features.
+> This application gives users the oppportunity to add, edit, delete any vehicle they wish. 
+> You also have the chance to add any review you wish to add to any vehicle.
 > 
 > 
 > 
 
 ### Technologies Used
  
- >JAVASCRIPT 
+ >Javascript 
 
  >CSS
 
@@ -33,10 +32,10 @@
 > Github
 
 > Express/NodeJS
-> 
+
 > Mongoose/MongoDB
-> 
-> 
+
+> Google OAuth
 
 ### Planning Materials
 
