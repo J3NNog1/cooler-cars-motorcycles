@@ -36,3 +36,16 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+.nav1 {
+  color: black;
+}
+.nav2 {
+  color: black;
+}
+.nav3 {
+  color: black;
+}
+
+#edit1 {
+  color: black;
+}
