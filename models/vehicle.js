@@ -2,6 +2,15 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const reviewSchema = new Schema({
+  content: String,
+  rating: {type: Number, min: 1, max: 5, default: 5}
+}, {
+  timestamps: true
+})
+
+
+
 const vehicleSchema = new Schema({
   year: Number,
   make: String,
@@ -10,15 +19,9 @@ const vehicleSchema = new Schema({
   fast: Boolean,
 
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
+  
   nowShowing: {type: Boolean, default: true},
   reviews: [reviewSchema],
-}, {
-  timestamps: true
-})
-
-const reviewSchema = new Schema({
-  content: String,
-  rating: {type: Number, min: 1, max: 5, default: 5}
 }, {
   timestamps: true
 })
@@ -29,6 +32,7 @@ const Vehicle = mongoose.model('Vehicle', vehicleSchema)
 
 export {
   Vehicle,
+  reviewSchema,
 }
 
 
