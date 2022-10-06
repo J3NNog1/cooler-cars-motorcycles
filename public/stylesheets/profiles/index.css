@@ -1,6 +1,12 @@
+body {
+  background-color: #35524A;
+}
+
+
 .main {
   display: flex;
   justify-content: center;
+ 
 }
 
 .card-container {
@@ -19,7 +25,7 @@
 .card {
   display: flex;
   width: 300px;
-  background-color: white;
+  background-color: #EDEEC9;
   border: 2px solid black;
   border-radius: 10px;
   color: black;
@@ -42,4 +48,19 @@
   margin: 0 10px;
 }
 
+nav {
+  background-color: #98c9A3;
 
+}
+
+.nav1 {
+  color: black
+}
+
+.nav2 {
+  color: black
+}
+
+.nav3 {
+  color: black
+}

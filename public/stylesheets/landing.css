@@ -78,6 +78,22 @@ a > button:hover {
 
 
 .img-div > img{
-  max-height: 85%;
+  max-height: 100%;
+  max-width: 100%;
 
+}
+
+#logo-div {
+  max-height: 10%;
+
+}
+
+#second-title {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#second-title {
+  text-align: left;
 }

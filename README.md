@@ -17,7 +17,8 @@
 > Keep in mind to make sure you're logged in so you have access to all UI features.
 > This application gives users the oppportunity to add, edit, delete any vehicle they wish. 
 > You also have the chance to add any review you wish to add to any vehicle.
-> 
+ > I 
+> My application is at the very early stages, however I'm very excited to continue to work on it after the course!
 > 
 > 
 
