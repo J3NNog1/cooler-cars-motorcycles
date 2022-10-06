@@ -1,7 +1,7 @@
 # COOLER CARS AND MOTORCYCLES 
 
 
-## Play me ==>
+## Check me out ==>
 ### [Cooler Cars & Motorcycles](https://flyio-cooler-cars-motorcycles.fly.dev)
 
 ## Get Started 
