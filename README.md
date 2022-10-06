@@ -2,7 +2,7 @@
 
 
 ## Play me ==>
-### [Cooler Cars & Motorcycles](flyio-cooler-cars-motorcycles.fly.dev)
+### [Cooler Cars & Motorcycles](https://flyio-cooler-cars-motorcycles.fly.dev)
 
 ## Get Started 
 
@@ -30,7 +30,13 @@
 
 > HTML
 
-> git
+> Github
+
+> Express/NodeJS
+> 
+> Mongoose/MongoDB
+> 
+> 
 
 ### Planning Materials
 
