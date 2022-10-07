@@ -10,16 +10,14 @@
 
 ### Screenshot Below ==>
 
-
+![screenshot](https://github.com/J3NNog1/war-card-game/blob/main/assets/Screen%20Shot%202022-09-15%20at%2010.48.11%20AM%20(2).png)
 
 ### How to
  
 > Keep in mind to make sure you're logged in so you have access to all UI features.
-> This application gives users the oppportunity to add, edit, delete any vehicle they wish. 
-> You also have the chance to add any review you wish to add to any vehicle.
- > I 
-> My application is at the very early stages, however I'm very excited to continue to work on it after the course!
-> 
+> This application allows users to add, edit, and delete any vehicle they wish. 
+> You also have the chance to add a review to any vehicle.
+> My application is at the very early stages, however, I'm very excited to continue to work on it after the course!
 > 
 
 ### Technologies Used
